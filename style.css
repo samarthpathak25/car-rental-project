@@ -66,3 +66,59 @@
 }
 
 
+/* reset */
+
+*,*::before,*::after{
+margin : 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+li { list-style: none;}
+
+a{ text-decoration: none;}
+
+a,
+img,
+span,
+label,
+input,
+button,
+ion-icon {display :block}
+
+button,
+input {
+    background: none;
+    border: none;
+    font : inherit;
+}
+
+button{ cursor: pointer; }
+
+input { width: 100% }
+
+ion-icon { pointer-events: none; }
+
+
+html{ 
+    font-family: var(--ff-open-sans);
+    color: var(--eerie-black);
+    font-size:lrem;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+ }
+
+ body{
+background: var(--alice-blue-1);
+overflow-x: hidden;
+height: 300vh; 
+}
+
+::-webkit-scrollbar {
+width: 15px;
+height: 10px;
+}
+
+::-webkit-scrollbar-track{background: var(--white);}
+
