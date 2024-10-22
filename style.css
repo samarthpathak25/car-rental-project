@@ -124,5 +124,7 @@ height: 10px;
 
 ::-webkit-scrollbar-thumb {
 background: hsla(240, 14%, 69%, 0.3);
-border: 2px solid var()
+border: 2px solid var(--white)
 }
+
+::-webkit-scrollbar-thumb:hover { background: hsla(240, 14%, 69%, 0.5); }
