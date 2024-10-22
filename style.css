@@ -130,3 +130,25 @@ border: 2px solid var(--white)
 ::-webkit-scrollbar-thumb:hover { background: hsla(240, 14%, 69%, 0.5); }
 
 
+
+/* reused style */
+
+
+/* header */
+
+.navbar{ display:none; } 
+
+.header-action{ display: none ;}
+
+.header{ 
+    background :var(--alice-blue-1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: var(--transition);
+    z-index: 4;
+}
+.header-action { box-shadow: var(--shadow-1);}
+
+.header{}
