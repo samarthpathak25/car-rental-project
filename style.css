@@ -122,3 +122,7 @@ height: 10px;
 
 ::-webkit-scrollbar-track{background: var(--white);}
 
+::-webkit-scrollbar-thumb {
+background: hsla(240, 14%, 69%, 0.3);
+border: 2px solid var()
+}
