@@ -133,6 +133,39 @@ border: 2px solid var(--white)
 
 /* reused style */
 
+.container{ padding-inline: 15px; }
+.btn{
+    position: relative;
+    background:var(--background, var(--alice-blue));
+    color:var(--color, var(--white)) ;
+    min-width:var(--width,40px);
+    min-height: var(--height,40px) ;
+    padding:5px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-14);
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    overflow: hidden;
+}
+
+.btn ion-icon{
+    font-size: 22px;
+    --ionicon-stroke-width:40px;
+}
+
+.btn::before{
+    content:"";
+    position: absolute;
+    inset:0 ;
+    background:linear-gradient(to right, hsla(0,0%,100%,0.4),transparent) ;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.btn:{}
 
 /* header */
 
@@ -149,6 +182,17 @@ border: 2px solid var(--white)
     transition: var(--transition);
     z-index: 4;
 }
-.header-action { box-shadow: var(--shadow-1);}
+.header-active { box-shadow: var(--shadow-1);}
 
-.header{}
+.header .container { 
+height: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.header-action{
+display: flex;
+align-items: center;
+gap: 15px;
+}
