@@ -354,9 +354,10 @@ margin-bottom: 30px;
   transition: var(--transition);
 }
 
-.input-field:focus { outline-color: var(--carolina-blue); }
+.input-field:focus { outline-color: var(--carolina-blue); }  /* the circle appear when hover*/
 
-.input-field::placeholder { color: var(--independence); }
+
+.input-field::placeholder { color: var(--independence); } 
 
 .hero-form .btn {
   --width: calc(100% - 40px);
