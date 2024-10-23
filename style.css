@@ -171,7 +171,8 @@ button, a { transition: var(--transition); }
 
 .btn:is(:hover, :focus)::before { opacity: 1; }
 
-/*  
+
+
 .section { padding-block: var(--section-padding); }
 
 .h1,
@@ -196,7 +197,7 @@ button, a { transition: var(--transition); }
 
 .w-100 { width: 100%; }
 
-*/
+
 
 
 
