@@ -22,3 +22,12 @@ for (let i = 0; i < navbarLink.length; i++ ){
 navbarLink[i].addEventListener("click", navToggleFunc);
 
 }
+
+// header active on scroll
+
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function () {
+ window.scrollY >= 10 ? header.classList.add("active")
+   : header.classList.remove("active");
+});
