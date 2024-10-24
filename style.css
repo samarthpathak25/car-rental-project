@@ -365,3 +365,23 @@ margin-bottom: 30px;
   margin: 20px;
   text-transform: uppercase;
 }
+
+/* feature car */
+
+.featured-car .title-wrapper { 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px,15px;
+   margin-bottom: 30px;
+}
+
+.featured-car-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--independence);
+  font-size: var(--fs-6);
+  
+}
