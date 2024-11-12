@@ -27,7 +27,7 @@
     --sapphire: hsl(211, 100%, 35%);
     --manatee: hsl(219, 14%, 60%);
     --white: hsl(0, 0%, 100%);
-
+    --lightred: hsl(358.4,100%,63.9%);
     --gradient: linear-gradient(to top, var(--alice-blue-2), var(--alice-blue-3));
 
     /* typograghy */
@@ -138,7 +138,7 @@ button, a { transition: var(--transition); }
 
 .btn {
   position: relative;
-  background: var(--background, var(--carolina-blue));
+  background: var(--background, var(--lightred));
   color: var(--color, var(--white));
   min-width: var(--width, 40px);
   min-height: var(--height, 40px);
@@ -167,7 +167,7 @@ button, a { transition: var(--transition); }
   transition: var(--transition);
 }
 
-.btn:is(:hover, :focus) { box-shadow: var(--shadow-2); }
+.btn:is(:hover, :focus) { box-shadow: var(--lightred); }
 
 .btn:is(:hover, :focus)::before { opacity: 1; }
 
@@ -256,11 +256,11 @@ button, a { transition: var(--transition); }
 
 .nav-toggle-btn span.three { transform: scaleX(0.4); }
 
-.nav-toggle-btn:is(:hover, :focus) span { background: var(--carolina-blue); }
+.nav-toggle-btn:is(:hover, :focus) span { background: var(--lightred); }
 
 .nav-toggle-btn.active span {
   transform: scaleX(1);
-  background: var(--carolina-blue);
+  background: var(--red-salsa);
 }
 
 .navbar {
@@ -292,7 +292,7 @@ button, a { transition: var(--transition); }
   margin-bottom: 15px;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--carolina-blue); }
+.navbar-link:is(:hover, :focus) { color: var(--lightred); }
 
 .overlay {
   position: fixed;
@@ -354,7 +354,7 @@ margin-bottom: 30px;
   transition: var(--transition);
 }
 
-.input-field:focus { outline-color: var(--carolina-blue); }  /* the circle appear when hover*/
+.input-field:focus { outline-color: var(--lightred); }  /* the circle appear when hover*/
 
 
 .input-field::placeholder { color: var(--independence); } 
@@ -398,7 +398,7 @@ color: var(--space-cadet);
   transition: var(--transition);
 }
 
-.featured-car-link:is(:hover, :focus) ion-icon{color: var(--carolina-blue);}
+.featured-car-link:is(:hover, :focus) ion-icon{color: var(--red-salsa);}
 
 .featured-car-list{
   display: grid;
@@ -453,7 +453,7 @@ color: var(--space-cadet);
   text-overflow: ellipsis;
 }
 
-.featured-car-card .card-title > a:is(:hover, :focus) { color: var(--carolina-blue); }
+.featured-car-card .card-title > a:is(:hover, :focus) { color: var(--lightred); }
 
 .featured-car-card .year {
   font-family: var(--ff-nunito);
@@ -481,7 +481,7 @@ color: var(--space-cadet);
 
 .featured-car-card .card-list-item ion-icon {
   font-size: 20px;
-  color: var(--carolina-blue);
+  color: var(--lightred);
   --ionicon-stroke-width: 38px;
 }
 
@@ -515,8 +515,8 @@ color: var(--space-cadet);
 }
 
 .featured-car-card .fav-btn {
-  --background: var(--beau-blue);
-  --color: var(--blue-jeans);
+  --background: var(--white);
+  --color: var(--lightred);
   --height: 36px;
   --width: 36px;
   --shadow-2: none;
@@ -637,8 +637,8 @@ color: var(--space-cadet);
 
 
 .footer {
-  background: var(--alice-blue-4);
-  color: var(--independence);
+  background: var(--alice-blue-4);  /* footer box*/
+  color: var(--independence); /* object written in footer*/
 }
 
 .footer a { color: inherit; }
@@ -823,7 +823,7 @@ color: var(--space-cadet);
     line-height: 1.3;
   }
 
-  .header-contact .contact-link:is(:hover, :focus) { color: var(--carolina-blue); }
+  .header-contact .contact-link:is(:hover, :focus) { color: var(--lightred); }
 
   .header-contact .contact-time {
     color: var(--independence);
@@ -862,7 +862,7 @@ color: var(--space-cadet);
 
   .hero-banner {
     display: block;
-    background: url("./assets/images/hero-banner.jpg") no-repeat;
+    background: url("./assets/images/ezgif.com-gif-maker-98-5.webp") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;
