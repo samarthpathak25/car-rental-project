@@ -862,7 +862,7 @@ color: var(--space-cadet);
 
   .hero-banner {
     display: block;
-    background: url("./assets/images/ezgif.com-gif-maker-98-5.webp") no-repeat;
+    background: url("./images/ezgif.com-gif-maker-98-5.webp") no-repeat;
     background-size: cover;
     background-position: left;
     position: absolute;
