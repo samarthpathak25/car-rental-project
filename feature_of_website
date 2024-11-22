@@ -1,22 +1,27 @@
 Features of the Website
+
 1. User Panel
 View Cars for Rent: Display all available cars with details like price, description, availability, and images.
 Book a Car: Users can select a car, provide their booking details, and submit a request.
 Check Booking Status: Users can check whether their booking is approved or pending.
+
 2. Admin Panel
 Add Car: Admin can add new cars with details (e.g., name, model, price, description, image, availability).
 Delete Car: Admin can remove cars from the inventory.
 Approve Bookings: Admin can view user booking requests and approve or reject them.
 Set Availability: Admin can set the dates when the car is available for rent.
+
 3. Shared Features
 Responsive design for mobile, tablet, and desktop views.
 Authentication for user and admin roles.
 Implementation Plan
+
 1. Tech Stack
 Frontend: HTML, CSS, JavaScript (React.js or plain JavaScript with Bootstrap for responsiveness)
 Backend: Node.js with Express.js (or Django/PHP as alternatives)
 Database: MongoDB or MySQL to store car details, bookings, and user information.
 Authentication: JWT or session-based for user login and admin panel security.
+
 2. Website Pages
 User Panel
 Home Page: Show available cars.
@@ -28,6 +33,7 @@ Dashboard: Summary of bookings and cars.
 Add Car: Form to add car details.
 Manage Cars: List of cars with options to edit or delete.
 Booking Requests: Approve or reject user bookings.
+
 3. Database Schema
 Cars Table
 Field	Type	Description
@@ -51,12 +57,13 @@ car_id	Foreign Key	ID of the booked car
 status	Enum	Pending/Approved
 start_date	Date	Booking start date
 end_date	Date	Booking end date
+
 4. Responsive Design
 Use Bootstrap or Tailwind CSS to create a responsive UI:
-
 Use grids for car listings.
 Utilize responsive navigation bars.
 Implement media queries for custom adjustments.
+
 5. Development Steps
 Setup Project:
 
@@ -75,6 +82,7 @@ Use fetch or axios for API calls.
 Test the System:
 
 Verify features (car addition, deletion, booking approval) work as expected.
+
 6. Sample Code Snippets
 API Endpoint Example (Express.js)
 javascript
