@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rent your favourite car</title>
+     <!-- 
+    - favicon
+      -->
+  <link rel="shortcut icon" href="./images/logofinal.png" type="image/svg+xml">
+
+  <!-- this is logo show at hte top of search  -->
     <!-- link css  -->
    <link rel="stylesheet" href="style.css">
     <!-- google font -->
@@ -37,7 +43,7 @@
           <a href="#featured car" class="navbar-link" data-nav-link>Explore cars</a>
         </li>
         <li>
-          <a href="#Instruction" class="navbar-link" data-nav-link>Instruction</a>
+          <a href="instruction.html" class="navbar-link" data-nav-link>Instruction</a>
         </li>
 
         <li>
@@ -120,9 +126,9 @@
     
                   <input type="text" name="year" id="input-3" class="input-field" placeholder="Add a minimal make year">
                 </div>
-    
-                <button type="submit" class="btn">Search</button>
-    
+
+                 <button type="submit" onclick="location.href='http://127.0.0.1:5500/error.html'" class="btn">Search</button>
+
               </form>
     
             </div>
@@ -202,7 +208,7 @@
                               <ion-icon name="heart-outline"></ion-icon>
                             </button>
 
-                            <button class="btn">Rent now</button>
+                            <button class="btn" >Rent now</button>
                           </div>
                         </ul>
                     </div>
@@ -575,8 +581,9 @@
     
                     <h3 class="card-title">Read the Instruction</h3>
     
-                    <p class="card-text"> Read the information about car and instruction that to be fallow by the driver who drive the car
-                      
+                    <p class="card-text"> Read the information about car and instruction that to be fallow by the driver
+                      <a href="instruction.html" class="card-link">Read Instruction</a>
+
                     </p>
     
                   </div>

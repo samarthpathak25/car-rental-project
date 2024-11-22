@@ -55,7 +55,7 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <!-- Left Side: Image (Background) -->
         <div class="left-side">
-            <img src="./../assets/images/ezgif.com-gif-maker-98-5.webp" alt="Login background image"
+            <img src="./images/ezgif.com-gif-maker-98-5.webp" alt="Login background image"
                 class="background-image">
         </div>
 

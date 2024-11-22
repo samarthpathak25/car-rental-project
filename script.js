@@ -31,3 +31,5 @@ window.addEventListener("scroll", function () {
  window.scrollY >= 10 ? header.classList.add("active")
    : header.classList.remove("active");
 });
+
+// { <button onclick="location.href='http://127.0.0.1:5500/error.html';">Go to Example</button> }
