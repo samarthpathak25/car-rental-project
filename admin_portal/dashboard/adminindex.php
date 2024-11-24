@@ -1,3 +1,7 @@
+<!-- <?php
+include "./php_code/session.php";
+
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +22,8 @@
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
-		<a href="#" class="brand">
-			
-				<img src="./../../images/logofinal.png"  alt="logo1.png" width="120" height="115">
+		<a href="./../../index.php" class="brand">
+				<img src="./../../images/logofinal.png"  alt="logo1.png" width="40" height="40">
 			</span>
 		</a>
 		<ul class="side-menu top">
@@ -31,7 +34,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="./../admin/admin_page.php">
+				<a href="./../car_collection">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Car Collection</span>
 				</a>
@@ -63,7 +66,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="logout">
+				<a href="./../../login_system/logout.php" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>

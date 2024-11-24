@@ -202,8 +202,10 @@ button, a { transition: var(--transition); }
 
 
 /* header */
-
-
+.logout {
+  color: var(--lightred);
+  font-size: medium;
+}
 
 .header-contact { display: none; }
 

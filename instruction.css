@@ -39,6 +39,7 @@ html {
 body {
   background: var(--alice-blue-1);
   overflow-x: hidden;
+  
 }
 
 ::-webkit-scrollbar {
@@ -127,3 +128,39 @@ span {
   color: #555;
   font-style: italic;
 }
+
+.container { padding-inline: 15px; }
+
+button,a { transition: var(--transition); }
+
+.btn {
+   position: relative;
+  background: var(--background, var(--lightred));
+  color: var(--color, var(--white));
+  min-width: var(--width, 40px);
+  min-height: var(--height, 40px);
+  padding: 15px 32px;
+  margin: 4px 2px;
+  display: inline-block; 
+  place-items: center;
+  border-radius: var(--radius-14);
+  font-family: var(--ff-nunito);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  overflow: hidden;
+  border: none;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, hsla(0, 0%, 100%, 0.4), transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.btn:is(:hover, :focus) { box-shadow: var(--lightred); }
+
+.btn:is(:hover, :focus)::before { opacity: 1; }

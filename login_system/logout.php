@@ -6,6 +6,6 @@ session_start();
 session_unset();
 session_destroy();
 
-header('location:login_form.php');
+header('location: http://localhost/samarth_project/car-rental-project');
 
 ?>
