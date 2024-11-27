@@ -50,6 +50,8 @@
                                 <span class="card-item-text">' . $row["gear_type"] . '
                                 </span>
                               </li>
+
+                               
                             </ul>
                         </div>
                       </div>

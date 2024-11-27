@@ -105,11 +105,11 @@ if (isset($_POST['submit'])) {
                             <p class="card-price">
                               <strong>&#8377 1000</strong> / Per day
                             </p>
-                            <!-- <button class =" btn fav-btn" aria-label="Add to favourite list"> -->
-                              <!-- <ion-icon name="heart-outline"></ion-icon> -->
-                            <!-- </button> -->
+                            <!-- <button class =" btn fav-btn" aria-label="Add to favourite list"> 
+                               <ion-icon name="heart-outline"></ion-icon> 
+                             </button>
 
-                            <!-- <button class="btn">Rent now</button> -->
+                             <button class="btn">Rent now</button> -->
                           </div>
                         </ul>
                     </div>

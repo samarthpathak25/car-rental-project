@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
                 ?>
             </div>
             <p class="dont-have-account">Don't have an account? <a class="register-now"
-                    href="register_form.php">Register Now</a></p>
+                    href="./../register">Register Now</a></p>
 
 
         </div>

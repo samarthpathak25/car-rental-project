@@ -298,8 +298,9 @@ if (isset($_SESSION["user_name"])) {
                       </button>
 
                       <button class="btn"
-                        onclick="location.href = 'http://127.0.0.1:5500/car-rental-project/payment/pindex.html' ">Rent
-                        now</button>
+                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
+                        Rent now
+                      </button>
                     </div>
                   </ul>
                 </div>
@@ -361,8 +362,9 @@ if (isset($_SESSION["user_name"])) {
                       </button>
 
                       <button class="btn"
-                        onclick="location.href = 'http://127.0.0.1:5500/car-rental-project/payment/pindex.html' ">Rent
-                        now</button>
+                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
+                        Rent now
+                      </button>
                     </div>
                   </ul>
                 </div>
@@ -425,8 +427,9 @@ if (isset($_SESSION["user_name"])) {
                       </button>
 
                       <button class="btn"
-                        onclick="location.href = 'http://127.0.0.1:5500/car-rental-project/payment/pindex.html' ">Rent
-                        now</button>
+                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
+                        Rent now
+                      </button>
                     </div>
                   </ul>
                 </div>
@@ -490,8 +493,9 @@ if (isset($_SESSION["user_name"])) {
                       </button>
 
                       <button class="btn"
-                        onclick="location.href = 'http://127.0.0.1:5500/car-rental-project/payment/pindex.html' ">Rent
-                        now</button>
+                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
+                        Rent now
+                      </button>
                     </div>
                   </ul>
                 </div>
@@ -553,8 +557,10 @@ if (isset($_SESSION["user_name"])) {
                         <ion-icon name="heart-outline"></ion-icon>
                       </button>
 
-                      <button class="btn" onclick="location.href = 'http://127.0.0.1:5500/payment/pindex.html' ">Rent
-                        now</button>
+                      <button class="btn"
+                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
+                        Rent now
+                      </button>
                     </div>
                   </ul>
                 </div>

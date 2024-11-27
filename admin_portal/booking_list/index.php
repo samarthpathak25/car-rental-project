@@ -11,14 +11,13 @@ include "./php_code/session.php";
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="adminstyle.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="./../../images/logofinal.png" type="image/svg+xml">
 
 
 	<title>Admin Dashboard</title>
 </head>
 <body>
-
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
@@ -27,7 +26,7 @@ include "./php_code/session.php";
 			</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
+			<li>
 				<a href="#">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
@@ -39,9 +38,9 @@ include "./php_code/session.php";
 					<span class="text">Car Collection</span>
 				</a>
 			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart' ></i>
+			<li class="active">
+            <a href="./../booking_list/index.php">					
+                <i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Booking List</span>
 				</a>
 			</li>
@@ -51,14 +50,7 @@ include "./php_code/session.php";
 					<span class="text">Add Cars</span>
 				</a>
 			</li>
-			<li>
-
-				<!--<a href="#">
-					<i class='bx bxs-group' ></i>
-					<span class="text">Team</span>
-				</a>
-			</li>
-		</ul> -->
+		</ul> 
 		<ul class="side-menu">
 			<li> 
 				<a href="#">
@@ -89,12 +81,7 @@ include "./php_code/session.php";
 					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
-			<!-- <input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>-->
+			
 			<a href="#" class="profile">
 				
 				<img src="img/people.png">
@@ -106,41 +93,26 @@ include "./php_code/session.php";
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
+					<h1>Booking List</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Dashboard</a> <!-- its is under theheading -->
+							<a href="#">Booking_list</a> <!-- its is under theheading -->
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="#">Home</a>
+							<a class="active" href="#">Recent Orders</a>
 						</li>
 					</ul>
 				</div>
 
-				<!-- car collection	
-				<div class="left">
-					<h1>Car Collection</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Cars Dashboard</a> 
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="deactive" href="#">Cars</a>
-						</li>
-					</ul>
-				</div> -->
+			
 
 
 
-				<!-- <a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Download PDF</span>
-				</a> -->
+				
 			</div>
 
-			<ul class="box-info">
+			<!-- <ul class="box-info">
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
@@ -162,7 +134,7 @@ include "./php_code/session.php";
 						<p>Total Pending Request</p>
 					</span>
 				</li>
-			</ul>
+			</ul> -->
 
 
 			<div class="table-data">
@@ -184,7 +156,7 @@ include "./php_code/session.php";
 							<tr>
 								<td>
 									<img src="img/people.png">
-									<p>John Doe</p>
+									<p>Person 1</p>
 								</td>
 								<td>01-10-2021</td>
 								<td><span class="status completed">Completed</span></td>
@@ -192,7 +164,7 @@ include "./php_code/session.php";
 							<tr>
 								<td>
 									<img src="img/people.png">
-									<p>John Doe</p>
+									<p>Person 2</p>
 								</td>
 								<td>01-10-2021</td>
 								<td><span class="status pending">Pending</span></td>
@@ -200,7 +172,7 @@ include "./php_code/session.php";
 							<tr>
 								<td>
 									<img src="img/people.png">
-									<p>John Doe</p>
+									<p>Person 3</p>
 								</td>
 								<td>01-10-2021</td>
 								<td><span class="status process">Process</span></td>
@@ -208,7 +180,7 @@ include "./php_code/session.php";
 							<tr>
 								<td>
 									<img src="img/people.png">
-									<p>John Doe</p>
+									<p>Person 4</p>
 								</td>
 								<td>01-10-2021</td>
 								<td><span class="status pending">Pending</span></td>
@@ -216,7 +188,7 @@ include "./php_code/session.php";
 							<tr>
 								<td>
 									<img src="img/people.png">
-									<p>John Doe</p>
+									<p>Person 5</p>
 								</td>
 								<td>01-10-2021</td>
 								<td><span class="status completed">Completed</span></td>
@@ -224,42 +196,12 @@ include "./php_code/session.php";
 						</tbody>
 					</table>
 				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Todos</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-					</ul>
-				</div>
+				
 			</div>
 		</main>
 		<!-- MAIN -->
 	</section>
-	<!-- CONTENT -->
-	
 
-	<script src="adminscript.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
