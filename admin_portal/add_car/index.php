@@ -15,9 +15,15 @@ if (isset($_POST['submit'])) {
 	$select = "INSERT INTO `car_details`
    (`company`, `car`, `year`, `people`, `car_type`, `mileage`, `gear_type`, `price`) VALUES 
    ('$company', '$car_name','$years','$num_person','$car_type','$mileage','$gear_type','$price')";
+	
 	$result = mysqli_query($conn, $select);
+	
+	if ($result) {
+		echo "Car details added successfully!";
+	} else {
+		echo "Error adding car details.";
+	}
 }
-;
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +42,6 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-
-
-
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="./../../index.php" class="brand">
@@ -52,18 +55,7 @@ if (isset($_POST['submit'])) {
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
-			<li>
-				<a href="./../car_collection">
-					<i class='bx bxs-shopping-bag-alt'></i>
-					<span class="text">Car Collection</span>
-				</a>
-			</li>
-			<li>
-				<a href="./../booking_list/index.php">
-					<i class='bx bxs-doughnut-chart'></i>
-					<span class="text">Booking List</span>
-				</a>
-			</li>
+
 			<li class="active">
 				<a href="./../add_car">
 
@@ -71,22 +63,35 @@ if (isset($_POST['submit'])) {
 					<span class="text">Add Cars</span>
 				</a>
 			</li>
-			<li>
 
-				<ul class="side-menu">
-					<li>
-						<a href="#">
-							<i class='bx bxs-cog'></i>
-							<span class="text">Settings</span>
-						</a>
-					</li>
-					<li>
-						<a href="./../../login_system/logout.php" class="logout">
-							<i class='bx bxs-log-out-circle'></i>
-							<span class="text">Logout</span>
-						</a>
-					</li>
-				</ul>
+			<li>
+				<a href="./../car_collection">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">Car Collection</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="./../booking_list/index.php">
+					<i class='bx bxs-doughnut-chart'></i>
+					<span class="text">Booking List</span>
+				</a>
+			</li>
+
+			<ul class="side-menu">
+				<li>
+					<a href="#">
+						<i class='bx bxs-cog'></i>
+						<span class="text">Settings</span>
+					</a>
+				</li>
+				<li>
+					<a href="./../../login_system/logout.php" class="logout">
+						<i class='bx bxs-log-out-circle'></i>
+						<span class="text">Logout</span>
+					</a>
+				</li>
+			</ul>
 	</section>
 	<!-- SIDEBAR -->
 
@@ -103,7 +108,7 @@ if (isset($_POST['submit'])) {
 					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>
 			</form>
-			
+
 			</a>
 			<!-- <a href="<?php echo $href; ?>" class="btn user-btn" aria-label="Profile">
 				<a href="" class="btn user-btn" aria-label="Profile">
@@ -112,7 +117,7 @@ if (isset($_POST['submit'])) {
 					echo $user_name;
 				} ?></h6>
 			</a> -->
-<!-- name should be see as admin in riht top -->
+			<!-- name should be see as admin in riht top -->
 			<!-- <img src="img/people.png"> -->
 			</a>
 		</nav>
@@ -123,26 +128,10 @@ if (isset($_POST['submit'])) {
 
 			<div class="head-title">
 				<div class="left">
-					<h1>Add Cars</h1>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Add New Cars</a> <!-- its is under theheading -->
-						</li>
-						<li><i class='bx bx-chevron-right'></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
+					<h1>Add Cars Details</h1>
 				</div>
-
-
-
-
-
 			</div>
 			<form action="" method="post">
-				<h3>Add Car Details</h3>
-				<!-- <div class="form-container"> -->
 				<ul class="box-info">
 					<li>
 
@@ -201,40 +190,16 @@ if (isset($_POST['submit'])) {
 
 						<span class="text">
 							<input type="text" name="price" required placeholder="Enter rent price" class="form-input1">
-
 						</span>
-					</li>
+					</li>					
 				</ul>
-				<!-- </div> -->
-
-
 				<input type="submit" name="submit" value="Add Car" class="btn">
-
 			</form>
 		</main>
+
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
-
-	<!-- <form action="" method="post">
-		<h3>Add New Car</h3> -->
-	<!-- <input type="text" name="company" required placeholder="Enter company name"> -->
-	<!-- <input type="text" name="car_name" required placeholder="Enter car name"> -->
-	<!-- <input type="text" name="years" required placeholder="Enter the year of car"> -->
-	<!-- <input type="text" name="num_person" required placeholder="Enter your total perons"> -->
-	<!-- <select name="car_type">
-	  <option value="Hybrid">Hybrid</option>
-	  <option value="Gasoline">Gasoline</option>
-	</select> -->
-	<!-- <input type="text" name="mileage" required placeholder="Enter Your car mileage"> -->
-	<!-- <select name="gear_type">
-	  <option value="Manual">Manual</option>
-	  <option value="Automatic">Automatic</option>
-	</select> -->
-	<!-- <input type="text" name="price" required placeholder="Enter rent price"> -->
-	<!-- <input type="submit" name="submit" value="Add Car" class="form-btn"> -->
-
-	<!-- </form> -->
 	<script src="style.js"></script>
 
 </body>

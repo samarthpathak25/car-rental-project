@@ -74,3 +74,11 @@ switchMode.addEventListener('change', function () {
 		document.body.classList.remove('dark');
 	}
 })
+
+//delete car
+
+function confirmDelete(carId) {
+	if (confirm("Are you sure you want to delete this car?")) {
+	  window.location.href = `delete_car.php?id=${carId}`;
+	}
+  }

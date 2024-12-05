@@ -1,9 +1,6 @@
-<!-- <?php
-include "./php_code/session.php";
-
-?> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,50 +14,52 @@ include "./php_code/session.php";
 
 	<title>Admin Dashboard</title>
 </head>
+
 <body>
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="./../../index.php" class="brand">
-				<img src="./../../images/logofinal.png"  alt="logo1.png" width="40" height="40">
+			<img src="./../../images/logofinal.png" alt="logo1.png" width="40" height="40">
 			</span>
 		</a>
 		<ul class="side-menu top">
 			<li>
-				<a href="#">
-					<i class='bx bxs-dashboard' ></i>
+				<a href="./../dashboard/adminindex.php">
+					<i class='bx bxs-dashboard'></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
 			<li>
+				<a href="./../add_car">
+					<i class='bx bxs-shopping-bag-alt'></i>
+					<span class="text">Add Cars</span>
+				</a>
+			</li>
+			<li>
 				<a href="./../car_collection">
-					<i class='bx bxs-shopping-bag-alt' ></i>
+					<i class='bx bxs-shopping-bag-alt'></i>
 					<span class="text">Car Collection</span>
 				</a>
 			</li>
 			<li class="active">
-            <a href="./../booking_list/index.php">					
-                <i class='bx bxs-doughnut-chart' ></i>
+				<a href="./../booking_list/index.php">
+					<i class='bx bxs-doughnut-chart'></i>
 					<span class="text">Booking List</span>
 				</a>
 			</li>
-			 <li>
-				<a href="./../add_car">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">Add Cars</span>
-				</a>
-			</li>
-		</ul> 
+
+		</ul>
 		<ul class="side-menu">
-			<li> 
+			<li>
 				<a href="#">
-					<i class='bx bxs-cog' ></i>
+					<i class='bx bxs-cog'></i>
 					<span class="text">Settings</span>
 				</a>
 			</li>
 			<li>
 				<a href="./../../login_system/logout.php" class="logout">
-					<i class='bx bxs-log-out-circle' ></i>
+					<i class='bx bxs-log-out-circle'></i>
 					<span class="text">Logout</span>
 				</a>
 			</li>
@@ -74,18 +73,18 @@ include "./php_code/session.php";
 	<section id="content">
 		<!-- NAVBAR -->
 		<nav>
-			<i class='bx bx-menu' ></i>
+			<i class='bx bx-menu'></i>
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>
 			</form>
-			
-			<a href="#" class="profile">
-				
-				<img src="img/people.png">
-			 </a> 	<!--	user name have to see -->
+
+			<!-- <a href="#" class="profile">
+
+				<img src="img/people.png"> -->
+			</a> <!--	user name have to see -->
 		</nav>
 		<!-- NAVBAR -->
 
@@ -96,107 +95,47 @@ include "./php_code/session.php";
 					<h1>Booking List</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Booking_list</a> <!-- its is under theheading -->
+							<a href="#">Booking List</a> <!-- its is under theheading -->
 						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
+						<li><i class='bx bx-chevron-right'></i></li>
 						<li>
 							<a class="active" href="#">Recent Orders</a>
 						</li>
 					</ul>
 				</div>
 
-			
 
 
 
-				
+
+
 			</div>
 
-			<!-- <ul class="box-info">
-				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>50</h3>
-						<p>Total Cars</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>10</h3>
-						<p>Total Users</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-dollar-circle' ></i>
-					<span class="text">
-						<h3>5</h3>
-						<p>Total Pending Request</p>
-					</span>
-				</li>
-			</ul> -->
+
 
 
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
 						<h3>Recent Orders</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
+						<i class='bx bx-search'></i>
+						<i class='bx bx-filter'></i>
 					</div>
 					<table>
 						<thead>
 							<tr>
-								<th>User</th>
-								<th>Date Order</th>
-								<th>Status</th>
+								<th>Car Details</th>
+								<th>Rent Days</th>
+								<th>Transaction Id</th>
+								<th>Total</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<img src="img/people.png">
-									<p>Person 1</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/people.png">
-									<p>Person 2</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/people.png">
-									<p>Person 3</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status process">Process</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/people.png">
-									<p>Person 4</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/people.png">
-									<p>Person 5</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
+							<?php include './../../php_code/userBookingList.php' ?>
 						</tbody>
 					</table>
 				</div>
-				
 			</div>
 		</main>
 		<!-- MAIN -->
@@ -204,4 +143,5 @@ include "./php_code/session.php";
 
 	<script src="script.js"></script>
 </body>
+
 </html>

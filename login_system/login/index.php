@@ -18,20 +18,18 @@ if (isset($_POST['submit'])) {
 
     if (mysqli_num_rows(result: $result) > 0) {
 
-        $row = mysqli_fetch_array(result: $result);
+        $userRow = mysqli_fetch_array(result: $result);
 
-        if ($row['user_type'] == 'admin') {
-
-            $_SESSION['user_name'] = $row['name'];
+        if ($userRow['user_type'] == 'admin') {
             $_SESSION['user_type'] = 'admin';
             header(header: 'location:./../../admin_portal/dashboard/adminindex.php');
-
-        } elseif ($row['user_type'] == 'user') {
-            $_SESSION['user_name'] = $row['name'];
-            $_SESSION['user_type'] ='user';
+        } elseif ($userRow['user_type'] == 'user') {
+            $_SESSION['user_name'] = $userRow['name'];
+            $_SESSION['user_type'] = 'user';
             header(header: 'location: ./../../user_portal/user_dashboard');
-
         }
+        $_SESSION['user_name'] = $userRow['name'];
+        $_SESSION['user_id'] = $userRow['id'];
 
     } else {
         $error[] = 'Incorrect email or password...!';
@@ -88,8 +86,8 @@ if (isset($_POST['submit'])) {
                 }
                 ?>
             </div>
-            <p class="dont-have-account">Don't have an account? <a class="register-now"
-                    href="./../register">Register Now</a></p>
+            <p class="dont-have-account">Don't have an account? <a class="register-now" href="./../register">Register
+                    Now</a></p>
 
 
         </div>

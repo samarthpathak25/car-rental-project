@@ -1,4 +1,5 @@
 <?php
+@include 'config.php';
 session_start();
 $user_name = '';
 $href = './login_system/login';
@@ -8,10 +9,10 @@ if (isset($_SESSION["user_name"])) {
   $user_name = $_SESSION["user_name"];
   if ($_SESSION['user_type'] == 'user') {
     $href = './user_portal/user_dashboard';
-  }else{
+  } else {
     $href = './admin_portal/dashboard/adminindex.php';
   }
-  $payment_path = './payment/pindex.html';
+  $payment_path = './payment?id=';
   // header("Location: ./admin_portal/dashboard/adminindex.php");
 }
 ?>
@@ -151,7 +152,7 @@ if (isset($_SESSION["user_name"])) {
               <input type="text" name="year" id="input-3" class="input-field" placeholder="Add a minimal make year">
             </div>
 
-            <button type="submit" onclick="location.href = 'http://127.0.0.1:5500/car-rental-project/error.html' "
+            <button type="submit" onclick="location.href = './car-rental-project/error.html' "
               class="btn">Search</button>
 
           </form>
@@ -180,392 +181,84 @@ if (isset($_SESSION["user_name"])) {
           </div>
 
           <ul class="featured-car-list">
-            <!-- car 1 -->
-            <li>
-              <div class="featured-car-card">
-                <figure class="card-banner">
-                  <img src="./images/maruti-suzuki-dzire.jpg" alt="maruti suzuki dzire" loading="lazy" width="440"
-                    height="300" class="w-100">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-title-wrapper">
-                    <h3 class="h3 card-title">
-                      <a href="#">Maruti Suzuki Dzire</a>
-
-                    </h3>
-
-                    <data class="" class="year" value="2021">2023</data>
-                  </div>
-
-                  <ul class="card-list">
-
-                    <li class="card-list-item">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span class="card-item-text">5 People</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
-                      <span class="card-item-text">Hybrid</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
-                      <span class="card-item-text">22km / 1-litre
-                      </span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
-                      <span class="card-item-text">Manual
-                      </span>
-                    </li>
-
-
-                    <div class="card-price-wrapper">
-
-                      <p class="card-price">
-                        <strong>&#8377 1000</strong> / Per day
-                      </p>
-                      <button class=" btn fav-btn" aria-label="Add to favourite list">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="btn"
-                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
-                        Rent now
-                      </button>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <!-- car 2 -->
-
-            <li>
-              <div class="featured-car-card">
-                <figure class="card-banner">
-                  <img src="./images/car-2.jpg" alt="BMW 3 Series 2019" loading="lazy" width="440" height="300"
-                    class="w-100">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-title-wrapper">
-                    <h3 class="h3 card-title">
-                      <a href="#">BMW 3 Series</a>
-
-                    </h3>
-
-                    <data class="" class="year" value="2019">2019</data>
-                  </div>
-
-                  <ul class="card-list">
-
-                    <li class="card-list-item">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span class="card-item-text">5 People</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
-                      <span class="card-item-text">Gasoline</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
-                      <span class="card-item-text">8.2km / 1-litre
-                      </span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
-                      <span class="card-item-text">Automatic
-                      </span>
-                    </li>
-
-
-                    <div class="card-price-wrapper">
-
-                      <p class="card-price">
-                        <strong>&#8377 5500</strong> / Per day
-                      </p>
-                      <button class=" btn fav-btn" aria-label="Add to favourite list">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="btn"
-                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
-                        Rent now
-                      </button>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <!-- car 3 -->
-
-            <li>
-              <div class="featured-car-card">
-                <figure class="card-banner">
-                  <img src="./images/car-3.jpg" alt="Volkswagen T-Cross 2020
-                      " loading="lazy" width="440" height="300" class="w-100">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-title-wrapper">
-                    <h3 class="h3 card-title">
-                      <a href="#">Volkswagen Polo</a>
-
-                    </h3>
-
-                    <data class="" class="year" value="2020">2020</data>
-                  </div>
-
-                  <ul class="card-list">
-
-                    <li class="card-list-item">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span class="card-item-text">5 People</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
-                      <span class="card-item-text">Gasoline</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
-                      <span class="card-item-text">12.3km / 1-litre
-                      </span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
-                      <span class="card-item-text">Automatic
-                      </span>
-                    </li>
-
-
-                    <div class="card-price-wrapper">
-
-                      <p class="card-price">
-                        <strong>&#8377 1500</strong> / Per day
-                      </p>
-                      <button class=" btn fav-btn" aria-label="Add to favourite list">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="btn"
-                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
-                        Rent now
-                      </button>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-
-            <!-- car 4 -->
-
-            <li>
-              <div class="featured-car-card">
-                <figure class="card-banner">
-                  <img src="./images/car-6.jpg" alt="BMW 5 Series GTI 2021" loading="lazy" width="440" height="300"
-                    class="w-100">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-title-wrapper">
-                    <h3 class="h3 card-title">
-                      <a href="#">BMW 5 Series</a>
-
-                    </h3>
-
-                    <data class="" class="year" value="2021">2021</data>
-                  </div>
-
-                  <ul class="card-list">
-
-                    <li class="card-list-item">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span class="card-item-text">5 People</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
-                      <span class="card-item-text">Gasoline</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
-                      <span class="card-item-text">7.6km / 1-litre
-                      </span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
-                      <span class="card-item-text">Automatic
-                      </span>
-                    </li>
-
-
-                    <div class="card-price-wrapper">
-
-                      <p class="card-price">
-                        <strong>&#8377 4000</strong> / Per day
-                      </p>
-                      <button class=" btn fav-btn" aria-label="Add to favourite list">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="btn"
-                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
-                        Rent now
-                      </button>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-
-            <!-- car 5 -->
-
-            <li>
-              <div class="featured-car-card">
-                <figure class="card-banner">
-                  <img src="./images/car-5.jpg" alt="BMW 4 Series 2019" loading="lazy" width="440" height="300"
-                    class="w-100">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-title-wrapper">
-                    <h3 class="h3 card-title">
-                      <a href="#">BMW 4 Series</a>
-
-                    </h3>
-
-                    <data class="" class="year" value="2019">2019</data>
-                  </div>
-
-                  <ul class="card-list">
-
-                    <li class="card-list-item">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span class="card-item-text">5 People</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
-                      <span class="card-item-text">Gasoline</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
-                      <span class="card-item-text">7.2km / 1-litre
-
-                      </span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
-                      <span class="card-item-text">Automatic
-                      </span>
-                    </li>
-
-
-                    <div class="card-price-wrapper">
-
-                      <p class="card-price">
-                        <strong>&#8377 2500</strong> / Per day
-                      </p>
-                      <button class=" btn fav-btn" aria-label="Add to favourite list">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="btn"
-                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
-                        Rent now
-                      </button>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
-
-            <!-- car 6 -->
-            <li>
-              <div class="featured-car-card">
-                <figure class="card-banner">
-                  <img src="./images/car-4.jpg" alt="Cadillac Escalade 2020" loading="lazy" width="440" height="300"
-                    class="w-100">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-title-wrapper">
-                    <h3 class="h3 card-title">
-                      <a href="#">Cadillac Escalade</a>
-
-                    </h3>
-
-                    <data class="" class="year" value="2020">2020</data>
-                  </div>
-
-                  <ul class="card-list">
-
-                    <li class="card-list-item">
-                      <ion-icon name="people-outline"></ion-icon>
-                      <span class="card-item-text">8 People</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="flash-outline"></ion-icon>
-                      <span class="card-item-text">Gasoline</span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="speedometer-outline"></ion-icon>
-                      <span class="card-item-text">14km / 1-litre
-
-
-                      </span>
-                    </li>
-
-                    <li class="card-list-item">
-                      <ion-icon name="hardware-chip-outline"></ion-icon>
-                      <span class="card-item-text">Automatic
-                      </span>
-                    </li>
-
-
-                    <div class="card-price-wrapper">
-
-                      <p class="card-price">
-                        <strong>&#8377 8000</strong> / Per day
-                      </p>
-                      <button class=" btn fav-btn" aria-label="Add to favourite list">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="btn"
-                        onclick="location.href = '<?php echo htmlspecialchars($payment_path, ENT_QUOTES, 'UTF-8'); ?>'">
-                        Rent now
-                      </button>
-                    </div>
-                  </ul>
-                </div>
-              </div>
-            </li>
+            <?php
+            $query = "SELECT * FROM car_details";
+            $result = mysqli_query($conn, $query);
+            if ($result->num_rows > 0) {
+              while ($car = mysqli_fetch_assoc($result)) {
+                // Check if $car is null before accessing its keys
+                if ($car) {
+                  $companyName = $car['company'];
+                  $carName = $car['car'];
+                  $year = $car['year'];
+                  $people = $car['people'];
+                  $carType = $car['car_type'];
+                  $carMilage = $car['mileage'];
+                  $gearType = $car['gear_type'];
+                  $price = $car['price'];
+                  $carId = $car['id'];
+                  $carImage = "./images/maruti-suzuki-dzire.jpg";
+
+                  echo "<li>";
+                  echo "<div class='featured-car-card'>";
+                  echo "<figure class='card-banner'>";
+                  echo "<img src='$carImage' alt='$carName' loading='lazy' width='440' height='300' class='w-100'>";
+                  echo "</figure>";
+
+                  echo "<div class='card-content'>";
+                  echo "<div class='card-title-wrapper'>";
+                  echo "<h3 class='h3 card-title'>";
+                  echo "<a href='#'>$companyName</a>";
+                  echo "<a href='#'>$carName</a>";
+                  echo "</h3>";
+
+                  echo "<data class='year' value='$year'>$year</data>";
+                  echo "</div>";
+
+                  echo "<ul class='card-list'>";
+                  echo "<li class='card-list-item'>";
+                  echo "<ion-icon name='people-outline'></ion-icon>";
+                  echo "<span class='card-item-text'>$people People</span>";
+                  echo "</li>";
+
+                  echo "<li class='card-list-item'>";
+                  echo "<ion-icon name='flash-outline'></ion-icon>";
+                  echo "<span class='card-item-text'>$carType</span>";
+                  echo "</li>";
+
+                  echo "<li class='card-list-item'>";
+                  echo "<ion-icon name='speedometer-outline'></ion-icon>";
+                  echo "<span class='card-item-text'>$carMilage km/litre</span>";
+                  echo "</li>";
+
+                  echo "<li class='card-list-item'>";
+                  echo "<ion-icon name='hardware-chip-outline'></ion-icon>";
+                  echo "<span class='card-item-text'>$gearType</span>";
+                  echo "</li>";
+
+                  echo "<div class='card-price-wrapper'>";
+                  echo "<p class='card-price'>";
+                  echo "<strong>&#8377 $price</strong> / Per day";
+                  echo "</p>";
+                  echo "<button class='btn fav-btn' aria-label='Add to favourite list'>";
+                  echo "<ion-icon name='heart-outline'></ion-icon>";
+                  echo "</button>";
+
+                  echo "<button class='btn' onclick=\"location.href = '$payment_path+$carId'\">";
+                  echo "Rent now";
+                  echo "</button>";
+                  echo "</div>"; // .card-price-wrapper
+                  echo "</ul>";
+                  echo "</div>"; // .card-content
+                  echo "</div>"; // .featured-car-card
+                  echo "</li>";
+                } else {
+                  // If $car is null, handle the error or just skip
+                  echo "<li>No cars available</li>";
+                }
+              }
+            }
+            ?>
 
           </ul>
         </div>
