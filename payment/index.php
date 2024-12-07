@@ -25,14 +25,14 @@ if (isset($_POST['submit'])) {
         $userId = $_SESSION['user_id'];
         
     }
-    $transaction_id = mysqli_real_escape_string($conn, $_POST['transaction_id']);
+    $upiId = mysqli_real_escape_string($conn, $_POST['upiId']);
     $rent_days = mysqli_real_escape_string($conn, $_POST['num_rent_days']);
 
     $query = "INSERT INTO `user_booking`(`user_id`, `car_id`, `rent_days`, `transaction_id`) VALUES (
         '$userId',
         '$carId',
         '$rent_days',
-        '$transaction_id'
+        '$upiId'
     )";
 
     // Execute query and check result

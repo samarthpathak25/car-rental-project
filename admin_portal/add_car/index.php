@@ -79,12 +79,7 @@ if (isset($_POST['submit'])) {
 			</li>
 
 			<ul class="side-menu">
-				<li>
-					<a href="#">
-						<i class='bx bxs-cog'></i>
-						<span class="text">Settings</span>
-					</a>
-				</li>
+				
 				<li>
 					<a href="./../../login_system/logout.php" class="logout">
 						<i class='bx bxs-log-out-circle'></i>

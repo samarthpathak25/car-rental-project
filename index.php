@@ -82,7 +82,7 @@ if (isset($_SESSION["user_name"])) {
         <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
       </div>
 
-      <a href="#featured car" class="btn" aria-labelledby="aria-label-txt">
+      <a href="featured car" class="btn" aria-labelledby="aria-label-txt">
         <ion-icon name="car-outline"></ion-icon>
 
         <span id="aria-label-txt">Explore cars</span>
@@ -282,9 +282,7 @@ if (isset($_SESSION["user_name"])) {
 
                 <h3 class="card-title">Create a profile</h3>
 
-                <p class="card-text">
-                  If you are going to use a passage of Lorem Ipsum, you need to be sure.
-                </p>
+                <p class="card-text">Sign up, manage bookings, and personalize options for seamless car rental.</p>
 
                 <a href="./login_system/login" class="card-link">Get started</a>
 
@@ -300,9 +298,9 @@ if (isset($_SESSION["user_name"])) {
 
                 <h3 class="card-title">Tell us what car you want</h3>
 
-                <p class="card-text">
-                  Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                </p>
+                <p class="card-text">Browse cars, filter by preferences, and select your ideal match effortlessly.</p>
+                <a href="#" class="card-link">Find Your Car</a>
+
 
               </div>
             </li>
@@ -316,7 +314,7 @@ if (isset($_SESSION["user_name"])) {
 
                 <h3 class="card-title">Read the Instruction</h3>
 
-                <p class="card-text"> Read the information about car and instruction that to be fallow by the driver
+                <p class="card-text"> Review car details and driver guidelines to ensure safety and compliance.
                   <a href="instruction.html" class="card-link">Read Instruction</a>
 
                 </p>
@@ -334,8 +332,7 @@ if (isset($_SESSION["user_name"])) {
                 <h3 class="card-title">Make a deal</h3>
 
                 <p class="card-text">
-                  There are many variations of passages of Lorem available, but the majority have suffered alteration
-                </p>
+                Finalize your choice, review the details, and secure the booking with ease. It's quick and hassle-free.               </p>
 
               </div>
             </li>

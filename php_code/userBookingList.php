@@ -24,7 +24,7 @@ if ($bookingListResult->num_rows > 0) {
         echo "<td>$rent_days</td>";
         echo "<td>$transaction_id</td>";
         echo "<td><p>
-        5000
+        $totalAmount
         </p></td>";
         // echo "<td><span class='status completed'>3000</span></td>";
         if (
