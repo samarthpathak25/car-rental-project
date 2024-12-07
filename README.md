@@ -1,4 +1,4 @@
-# car-rental-project
+# Car-rental-project
 User Functionality:
 
 Search and Availability: Users can search for vehicles based on criteria like date, time, type, and location.
