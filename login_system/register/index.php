@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
       } else {
          $insert = "INSERT INTO `user_form`(`name`, `contact`, `address`, `email`, `password`, `user_type`) VALUES ('$name', '$contact', '$address','$email','$pass','$user_type')";
          mysqli_query($conn, $insert);
-         header('location:./login_system/login/');
+         header('location:./../../login_system/login/index.php');
       }
    }
 
@@ -78,7 +78,8 @@ if (isset($error)) {
             <h3>register now</h3>
 
             <input type="text" name="name" required placeholder="enter your name">
-            <input type="text" name="contact" required placeholder="enter your contact number">
+            <input type="text" name="contact" required placeholder="enter your contact number" pattern="\d{10}"
+               title="Please enter a 10-digit phone number">
             <input type="text" name="address" required placeholder="enter your Address">
             <input type="email" name="email" required placeholder="enter your email">
             <input type="password" name="password" required placeholder="enter your password">
@@ -88,7 +89,7 @@ if (isset($error)) {
                <option value="admin">admin</option>
             </select>
             <input type="submit" name="submit" value="register now" class="form-btn">
-            <p>Already have an account? <a href="./../login">login now</a></p>
+            <p>Already have an account? <a href="./../../login_system/login/index.php">login now</a></p>
          </form>
 
       </div>
