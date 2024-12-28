@@ -23,7 +23,7 @@ if (isset($_SESSION["user_name"])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rent your favourite car</title>
+  <title>Quick Drive Car Rental </title>
   <!-- 
     - favicon
       -->
@@ -62,7 +62,7 @@ if (isset($_SESSION["user_name"])) {
           </li>
 
           <li>
-            <a href="#featured car" class="navbar-link" data-nav-link>Explore cars</a>
+            <a href="#featured_car" class="navbar-link" data-nav-link>Explore cars</a>
           </li>
           <li>
             <a href="instruction.html" class="navbar-link" data-nav-link>Terms and Condition</a>
@@ -82,7 +82,10 @@ if (isset($_SESSION["user_name"])) {
         <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
       </div>
 
-      <a href="featured car" class="btn" aria-labelledby="aria-label-txt">
+
+
+      <a href="#featured_car" class="btn" aria-labelledby="aria-label-txt">
+
         <ion-icon name="car-outline"></ion-icon>
 
         <span id="aria-label-txt">Explore cars</span>
@@ -152,8 +155,7 @@ if (isset($_SESSION["user_name"])) {
               <input type="text" name="year" id="input-3" class="input-field" placeholder="Add a minimal make year">
             </div>
 
-            <button type="submit" onclick="location.href = './car-rental-project/error.html' "
-              class="btn">Search</button>
+            <button class="btn" onclick="goToNextPage()">Search</button>
 
           </form>
 
@@ -166,20 +168,13 @@ if (isset($_SESSION["user_name"])) {
 
       <!-- feature car -->
 
-      <section class="section featurecar" id="featured car">
+      <section class="section featurecar" id="featured_car">
         <div class="container">
 
           <div class="title-wrapper">
-            <h2 class="h2 section-title">Featured cars</h2>
-
-            <a href="#" class="featured-car-link">
-
-              <span>View more</span>
-
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </a>
+            <h2 class="h2 section-title">Featured cars</h2></a>
           </div>
-
+          <br>
           <ul class="featured-car-list">
             <?php
             $query = "SELECT * FROM car_details";
@@ -332,7 +327,10 @@ if (isset($_SESSION["user_name"])) {
                 <h3 class="card-title">Make a deal</h3>
 
                 <p class="card-text">
-                Finalize your choice, review the details, and secure the booking with ease. It's quick and hassle-free.               </p>
+
+                  Finalize your choice, review the details, and secure the booking with ease. It's quick and
+                  hassle-free. </p>
+
 
               </div>
             </li>
@@ -344,27 +342,7 @@ if (isset($_SESSION["user_name"])) {
 
 
 
-      <!-- instruction blog-->
 
-      <!-- <section class="section blog" id="blog">
-
-            <div class=" blog-container">
-
-              <h2 class="h2 section-title">Term & condition </h2>
-               
-                <ul class="blog-list has-scrollbar">
-
-                  <li>
-                    <div class="blog card">
-                      <figure class="card-banner">
-
-                         <a href="#"> -->
-
-      <!-- <img src="./images/blog-1.jpg" alt="Opening of new offices of the company
-                          " loading="lazy"  class="w-100">
-
-                          <a href="#" class="btn card-badge"></a> 
-                      </figure> -->
 
 
       </div>
@@ -420,7 +398,7 @@ if (isset($_SESSION["user_name"])) {
           </li>
 
           <li>
-            <a href="7405541541" class="footer-link">Contacts</a>
+            <a href="#7405541541" class="footer-link">Contacts</a>
           </li>
 
         </ul>
@@ -552,6 +530,11 @@ if (isset($_SESSION["user_name"])) {
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script>
+    function goToNextPage() {
+      window.location.href = "error.html";
+    }
+  </script>
 </body>
 
 </html>
